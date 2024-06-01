@@ -1,0 +1,218 @@
+:root{
+
+    /* Primary */
+    --clr-primary-light-red: hsl(0, 100%, 67%);
+    --clr-primary-orangey-yellow: hsl(39, 100%, 56%);
+    --clr-primary-green-teal: hsl(166, 100%, 37%);
+    --clr-primary-cobalt-blue: hsl(234, 85%, 45%);
+
+    /* Gradients */
+    --gr-light-slate-blue: hsl(252, 100%, 67%);/* background */
+    --gr-light-royal-blue: hsl(241, 81%, 54%);/* background */
+    --gr-violet-blue: hsla(256, 72%, 46%, 1); /* circle */
+    --gr-persian-blue: hsla(241, 72%, 46%, 0); /* circle */
+
+    /* Neutral */
+    --neutral-white: hsl(0, 0%, 100%);
+    --neutral-pale-blue: hsl(221, 100%, 96%);
+    --neutral-light-lavender: hsl(241, 100%, 89%);
+    --neutral-dark-gray-blue: hsl(224, 30%, 27%);
+
+    /* Font weight */
+    --fw-500: 500;
+    --fw-700: 700;
+    --fw-800: 800;
+
+
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* This removes default margins */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Setting core body defaults */
+body {
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    min-height: 100svh;
+    text-rendering: optimizeSpeed; 
+    line-height: 1.5;
+    font-family: Hanken Grotesk, sans-serif;
+    color: var(--neutral-white);
+    background-color: var(--neutral-pale-blue);
+}
+
+.card-container{
+    background-color: var(--neutral-white);
+    border-radius: 2.5rem;
+    box-shadow: rgba(0, 0, 0, .24) 0px 3px 8px;
+}
+
+.flow > *:where(:not(:first-child)) {
+    margin-top: 1rem;
+  }
+
+.result{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background: linear-gradient(to bottom, var(--gr-light-slate-blue), var(--gr-light-royal-blue));
+    border-bottom-left-radius: 2.5rem;
+    border-bottom-right-radius: 2.5rem;
+}
+
+.result > p:last-of-type{
+    text-align: center;
+    padding: 0 1rem;
+    color: var(--neutral-light-lavender)
+}
+
+.result >h3:last-of-type{
+    font-size: 1.5rem;
+}
+
+.circle{
+    display: flex;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    line-height: 1.2;
+    background: linear-gradient(to bottom, var(--gr-violet-blue), var(--gr-persian-blue));
+}
+
+.circle h1{
+    font-size: 3.5rem;
+}
+
+.candidate-result{
+    opacity: 50%;
+}
+
+.total-score{
+    opacity: 50%;
+}
+
+.score-summary{
+    display: flex;
+    flex-direction: column;
+    padding: 2.5rem;
+    /* border: 1px solid black; */
+    gap: 1rem;
+}
+
+.score-summary h3{
+    opacity: 70%;
+}
+
+.stat-name{
+    display: flex;
+    gap: 0.5rem;
+}
+
+.rows{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+
+.row:nth-child(1){
+    background-color: hsla(0, 100%, 67%, .1);
+}
+
+.row:nth-child(2){
+    background-color: hsla(39, 100%, 56%, .1);
+}
+
+.row:nth-child(3){
+    background-color: hsl(166, 100%, 37%, .1);
+}
+
+.row:nth-child(4){
+    background-color: hsl(234, 85%, 45%, .1);
+}
+
+.primary-color-red{
+    color: var(--clr-primary-light-red);
+    font-weight: var(--fw-700);
+}
+
+.primary-color-yellow{
+    color: var(--clr-primary-orangey-yellow);
+    font-weight: var(--fw-700);
+}
+
+.primary-color-teal{
+    color: var(--clr-primary-green-teal);
+    font-weight: var(--fw-700);
+}
+
+.primary-color-blue{
+    color: var(--clr-primary-cobalt-blue);
+    font-weight: var(--fw-700);
+}
+
+.btn{
+    margin-top: 1.5rem;
+    padding: 1rem;
+    width: 100%;
+    border-radius: 2rem;
+    border: none;
+    color: var(--neutral-white);
+    font-size: 1rem;
+    font-family: Hanken Grotesk, sans-serif;
+    font-weight: var(--fw-700);
+    background-color: var(--neutral-dark-gray-blue);
+}
+
+@media (min-width: 800px){
+    body{
+        display: flex; 
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+    }
+    .card-container{
+        display: flex;
+        width: 80%;
+        /* border: 1px solid black; */
+        margin: 0 auto;
+    }
+    .result{
+        width: 100%;
+        border-radius: 2.5rem;
+    }
+    .score-summary{
+        /* border: 1px solid black; */
+        width: 100%;
+    }
+}

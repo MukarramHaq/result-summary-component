@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Results summary component</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <title>Frontend Mentor | Results summary component</title>
 
-  Your Result
+    <!-- Your Result
   76
   of 100
 
@@ -37,11 +39,67 @@
   Visual
   72 / 100
 
-  Continue
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+  Continue -->
+  </head>
+  <body>
+    <main>
+      <div class="card">
+        <div class="card-container">
+          <section class="result flow">
+            <h3 class="candidate-result">Your Result</h3>
+            <div class="circle">
+              <h1 class="obtained-score">76</h1>
+              <p class="total-score">of 100</p>
+            </div>
+            <h3>Great</h3>
+            <p>You scored higher than 65% of the people who have taken these tests.</p>
+          </section>
+          <section style="color:black" class="score-summary">
+            <h3>Summary</h3>
+            <div class="stats">
+              <div class="rows">
+                <div class="row">
+                  <div class="stat-name primary-color-red">
+                    <img alt="reaction icon" src="assets/images/icon-reaction.svg">
+                    <p>Reaction</p>
+                  </div>
+                  <div class="state-score">
+                    <p><b>80</b> / 100</p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="stat-name primary-color-yellow">
+                    <img alt="memory icon" src="assets/images/icon-memory.svg">
+                    <p>Memory</p>
+                  </div>
+                  <div class="state-score ">
+                    <p><b>92</b> / 100</p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="stat-name primary-color-teal">
+                    <img alt="verbal icon" src="assets/images/icon-verbal.svg">
+                    <p>Verbal</p>
+                  </div>
+                  <div class="state-score">
+                    <p><b>60</b> / 100</p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="stat-name primary-color-blue">
+                    <img alt="visual icon" src="assets/images/icon-visual.svg">
+                    <p>Visual</p>
+                  </div>
+                  <div class="state-score">
+                    <p><b>72</b> / 100</p>
+                  </div>
+                </div>
+              </div>
+              <button class="btn">Continue</button>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+  </body>
 </html>
